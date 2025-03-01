@@ -20,6 +20,7 @@ def initialize_browser(request):
     elif browser_name == "edge":
         driver = webdriver.Edge()
     driver.get("https://rahulshettyacademy.com/angularpractice/")
+    driver.implicitly_wait(4)
     driver.maximize_window()
     yield driver
     driver.quit()

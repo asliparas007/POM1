@@ -2,10 +2,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 from pageObjects.ShopPage import ShopPage
+from utlis.browserutils import BrowserUtils
 
 
-class LoginPage:
+class LoginPage(BrowserUtils):
     def __init__(self,driver):
+        super().__init__(driver)
         self.driver = driver
 
         self.get_username = (By.XPATH, '//input[@name="username"]')
